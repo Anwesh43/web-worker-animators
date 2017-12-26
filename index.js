@@ -42,3 +42,13 @@ class ColoredCircle {
         })
     }
 }
+const createCirclesAtInterval = (time,color) => {
+    const looper = looperPool.startLoop(time,()=>{
+        const circle = new ColoredCircle(color)
+        circle.startUpdating()
+    })
+}
+createBox()
+createCirclesAtInterval(2,"#f44336")
+createCirclesAtInterval(3,"#FFC107")
+createCirclesAtInterval(5,"#6A1B9A")
